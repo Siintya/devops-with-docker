@@ -11,6 +11,7 @@ mongo         latest    4d441da0b855   2 weeks ago     861MB
 ubuntu        latest    b1e9cef3f297   5 weeks ago     78.1MB
 nginx         latest    39286ab8a5e1   7 weeks ago     188MB
 redis         latest    590b81f2fea1   2 months ago    117MB
+
 hello-world   latest    d2c94e258dcb   17 months ago   13.3kB
 
 # remove containers
