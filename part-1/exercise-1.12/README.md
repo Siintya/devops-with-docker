@@ -46,5 +46,6 @@ Note that the development build is not optimized.
 To create a production build, use npm run build.
 
 ```
-
+### Output in Browser
+![Gambar Proyek](https://raw.githubusercontent.com/Siintya/devops-with-docker/master/part-1/exercise-1.12/exercise-1.12.png)
 
