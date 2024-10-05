@@ -6,10 +6,11 @@ $ docker pull devopsdockeruh/simple-web-service:alpine
 
 ### check for compare size image
 $ docker image ls <br>
-REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE <br>
-devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB <br>
+```markdown
+REPOSITORY                          TAG       IMAGE ID       CREATED       SIZE 
+devopsdockeruh/simple-web-service   ubuntu    4e3362e907d5   3 years ago   83MB 
 devopsdockeruh/simple-web-service   alpine    fd312adc88e0   3 years ago   15.7MB
-
+```
 ### Getting into the Alpine Container
 $ docker run -it devopsdockeruh/simple-web-service:alpine
 
@@ -17,5 +18,3 @@ $ docker run -it devopsdockeruh/simple-web-service:alpine
 $ docker exec -it naughty_darwin sh <br>
 /usr/src/app # tail -f ./text.log <br>
 Secret message is: 'You can find the source code here: https://github.com/docker-hy'
-
-
