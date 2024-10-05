@@ -1,4 +1,4 @@
-## EXERCISE 1.9: Volumes
+## EXERCISE 1.9: VOLUMES
 
 ### Commands
 ```markdown
