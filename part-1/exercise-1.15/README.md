@@ -10,7 +10,7 @@ $ docker build -t sintya15/my-docker-app .
 $ docker run -p 3000:3000 sintya15/my-docker-app
 ```
 ### Output
-Open a browser and access http://localhost:3000 to see the results.
+Open a browser and access http://localhost:3000 to see the results. <br>
 ![Gambar Proyek](https://raw.githubusercontent.com/Siintya/devops-with-docker/master/part-1/exercise-1.15/exercise-1.15.png)
 ### Publish to Docker Hub
 ```markdown
