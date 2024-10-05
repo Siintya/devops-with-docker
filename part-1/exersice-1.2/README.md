@@ -1,4 +1,6 @@
-# Running docker ps -a and docker image ls will confirm this.
+## EXERCISE 1.2: CLEANUP 
+
+### Running docker ps -a and docker image ls will confirm this.
 $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND                  CREATED          STATUS                      PORTS     NAMES
 7b7ea382324c   nginx     "/docker-entrypoint.…"   18 minutes ago   Exited (0) 9 minutes ago              pensive_lehmann
@@ -14,12 +16,12 @@ redis         latest    590b81f2fea1   2 months ago    117MB
 
 hello-world   latest    d2c94e258dcb   17 months ago   13.3kB
 
-# remove containers
+### Remove containers
 $ docker container rm <container_name>
 # remove image
 $ docker image rm <image_name>
 
-# Submit the output for docker ps -a and docker image ls
+### Output
 $ docker ps -a
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 

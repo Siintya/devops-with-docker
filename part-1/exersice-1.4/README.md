@@ -1,14 +1,16 @@
-# Running ubuntu with an interactive terminal
+## EXERCISE 1.4: MISSING DEPENDENCIES
+
+### Running ubuntu with an interactive terminal
 $ docker run -it ubuntu
 
-# install curl inside container
+### Install curl inside container
 $ apt-get update
 $ apt install curl -y
 
-# Testing!
+### Testing
 $ sh -c 'while true; do echo "Input website:"; read website; echo "Searching.."; sleep 1; curl http://$website; done'
 
-# Result
+### Output
 Input website:
 helsinki.fi
 Searching..
