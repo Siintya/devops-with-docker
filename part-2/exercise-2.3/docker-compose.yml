@@ -1,23 +1,14 @@
-version: '2.2'
+version: '3'
 
 services:
+  frontend:
+    image: frontend
+    ports: 
+      - 5000:5000
+    container_name: frontend-container
 
-    frontend:
-      image: frontend:latest
-      ports:
-        - "5000:5000"
-      container_name: frontend
-
-    backend:
-      image: backend:latest
-      ports:
-        - "8082:8080"
-      container_name: backend
-      environment:
-        - REDIS_HOST=redis
-        - REQUEST_ORIGIN=http://localhost:5000/
-      restart: unless-stopped
-      
-    redis:
-      image: redis
-      container_name: redis
+  backend:
+    image: backend
+    ports:
+      - 8080:8080
+    container_name: backend-container
