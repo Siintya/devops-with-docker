@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+    frontend:
+        image: frontend
+        ports: 
+            - "5000:5000"  # Menyertakan tanda kutip untuk memastikan ini dianggap sebagai string
+        container_name: frontend-container-apps
+
+    backend:
+        image: backend
+        ports:
+            - "8080:8080"
+        environment:
+            - REDIS_HOST=redis-db
+            - POSTGRES_HOST=postgres-db
+            - POSTGRES_PASSWORD=postgres
+        depends_on:
+            - redis-db
+            - postgres-db
+        container_name: backend-container-apps
+            
+    redis-db:
+        image: redis:alpine
+        restart: unless-stopped
+        container_name: redis-db
+
+    postgres-db:
+        image: postgres
+        environment:
+            - POSTGRES_PASSWORD=postgres
+        volumes:
+            - database:/var/lib/postgresql/data  # Volume terdefinisi dengan benar
+        restart: unless-stopped
+        container_name: postgres-db
+
+# Definisi volume harus berada di luar bagian services
+volumes:
+    database:  # Mendefinisikan volume untuk PostgreSQL
