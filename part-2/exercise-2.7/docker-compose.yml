@@ -1,0 +1,30 @@
+version: '3'
+
+services:
+  frontend:
+    image: frontend
+    ports: 
+      - 5000:5000
+    container_name: frontend-apps
+
+  backend:
+    image: backend
+    ports:
+      - 8080:8080
+    environment:
+    - REDIS_HOST=redis-db
+    - POSTGRES_HOST=postgres-db
+    container_name: backend-apps
+        
+  redis-db:
+    image: redis:alpine
+    restart: unless-stopped
+    container_name: redis-db
+
+  postgres-db:
+    image: postgres
+    environment:
+      - POSTGRES_PASSWORD=postgres
+    volumes:
+      - ./database:/var/lib/postgresql/data
+    restart: unless-stopped
