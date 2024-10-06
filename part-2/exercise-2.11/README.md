@@ -1,4 +1,4 @@
-## EXERCISE 2.10
+## EXERCISE 2.9
 
 ### Commands
 ```markdown
